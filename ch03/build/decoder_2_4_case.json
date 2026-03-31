@@ -1,0 +1,105 @@
+{
+  "creator": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 16.0.0 -fPIC -O3)",
+  "modules": {
+    "decoder_2_4_case": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "rtl/decoder_2_4_case.v:1.1-17.10"
+      },
+      "ports": {
+        "a": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "en": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 5, 6, 7, 8 ]
+        }
+      },
+      "cells": {
+        "$auto$proc_rom.cc:155:do_switch$13": {
+          "hide_name": 1,
+          "type": "$mem_v2",
+          "parameters": {
+            "ABITS": "00000000000000000000000000000011",
+            "INIT": "10000100001000010000000000000000",
+            "MEMID": "$auto$proc_rom.cc:155:do_switch$13",
+            "OFFSET": "00000000000000000000000000000000",
+            "RD_ARST_VALUE": "xxxx",
+            "RD_CE_OVER_SRST": "0",
+            "RD_CLK_ENABLE": "0",
+            "RD_CLK_POLARITY": "1",
+            "RD_COLLISION_X_MASK": "0",
+            "RD_INIT_VALUE": "xxxx",
+            "RD_PORTS": "00000000000000000000000000000001",
+            "RD_SRST_VALUE": "xxxx",
+            "RD_TRANSPARENCY_MASK": "0",
+            "RD_WIDE_CONTINUATION": "0",
+            "SIZE": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000000100",
+            "WR_CLK_ENABLE": "0",
+            "WR_CLK_POLARITY": "0",
+            "WR_PORTS": "00000000000000000000000000000000",
+            "WR_PRIORITY_MASK": "0",
+            "WR_WIDE_CONTINUATION": "0"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/decoder_2_4_case.v:8.5-14.12"
+          },
+          "port_directions": {
+            "RD_ADDR": "input",
+            "RD_ARST": "input",
+            "RD_CLK": "input",
+            "RD_DATA": "output",
+            "RD_EN": "input",
+            "RD_SRST": "input",
+            "WR_ADDR": "input",
+            "WR_CLK": "input",
+            "WR_DATA": "input",
+            "WR_EN": "input"
+          },
+          "connections": {
+            "RD_ADDR": [ 2, 3, 4 ],
+            "RD_ARST": [ "0" ],
+            "RD_CLK": [ "x" ],
+            "RD_DATA": [ 5, 6, 7, 8 ],
+            "RD_EN": [ "1" ],
+            "RD_SRST": [ "0" ],
+            "WR_ADDR": [ ],
+            "WR_CLK": [ ],
+            "WR_DATA": [ ],
+            "WR_EN": [ ]
+          }
+        }
+      },
+      "netnames": {
+        "a": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "src": "rtl/decoder_2_4_case.v:2.17-2.18"
+          }
+        },
+        "en": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "rtl/decoder_2_4_case.v:3.11-3.13"
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8 ],
+          "attributes": {
+            "src": "rtl/decoder_2_4_case.v:4.22-4.23"
+          }
+        }
+      }
+    }
+  }
+}

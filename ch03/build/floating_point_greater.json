@@ -1,0 +1,336 @@
+{
+  "creator": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 16.0.0 -fPIC -O3)",
+  "modules": {
+    "floating_point_greater": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "rtl/floating_point_greater.v:1.1-14.10"
+      },
+      "ports": {
+        "a": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 ]
+        },
+        "agtb": {
+          "direction": "output",
+          "bits": [ 28 ]
+        }
+      },
+      "cells": {
+        "$and$rtl/floating_point_greater.v:10$48": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:10.20-10.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 29 ],
+            "Y": [ 30 ]
+          }
+        },
+        "$and$rtl/floating_point_greater.v:9$46": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:9.20-9.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 31 ],
+            "B": [ 27 ],
+            "Y": [ 32 ]
+          }
+        },
+        "$gt$rtl/floating_point_greater.v:12$50": {
+          "hide_name": 1,
+          "type": "$gt",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:12.31-12.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
+            "B": [ 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 ],
+            "Y": [ 33 ]
+          }
+        },
+        "$lt$rtl/floating_point_greater.v:11$49": {
+          "hide_name": 1,
+          "type": "$lt",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:11.31-11.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
+            "B": [ 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 ],
+            "Y": [ 34 ]
+          }
+        },
+        "$not$rtl/floating_point_greater.v:10$47": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:10.29-10.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 27 ],
+            "Y": [ 29 ]
+          }
+        },
+        "$not$rtl/floating_point_greater.v:9$45": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:9.20-9.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "Y": [ 31 ]
+          }
+        },
+        "$ternary$rtl/floating_point_greater.v:10$52": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:10.19-12.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 35 ],
+            "B": [ "0" ],
+            "S": [ 30 ],
+            "Y": [ 36 ]
+          }
+        },
+        "$ternary$rtl/floating_point_greater.v:11$51": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:11.19-12.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 33 ],
+            "B": [ 34 ],
+            "S": [ 14 ],
+            "Y": [ 35 ]
+          }
+        },
+        "$ternary$rtl/floating_point_greater.v:9$53": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:9.19-12.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 36 ],
+            "B": [ "1" ],
+            "S": [ 32 ],
+            "Y": [ 28 ]
+          }
+        }
+      },
+      "netnames": {
+        "$and$rtl/floating_point_greater.v:10$48_Y": {
+          "hide_name": 1,
+          "bits": [ 30 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:10.20-10.36"
+          }
+        },
+        "$and$rtl/floating_point_greater.v:9$46_Y": {
+          "hide_name": 1,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:9.20-9.36"
+          }
+        },
+        "$gt$rtl/floating_point_greater.v:12$50_Y": {
+          "hide_name": 1,
+          "bits": [ 33 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:12.31-12.44"
+          }
+        },
+        "$lt$rtl/floating_point_greater.v:11$49_Y": {
+          "hide_name": 1,
+          "bits": [ 34 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:11.31-11.44"
+          }
+        },
+        "$not$rtl/floating_point_greater.v:10$47_Y": {
+          "hide_name": 1,
+          "bits": [ 29 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:10.29-10.36"
+          }
+        },
+        "$not$rtl/floating_point_greater.v:9$45_Y": {
+          "hide_name": 1,
+          "bits": [ 31 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:9.20-9.27"
+          }
+        },
+        "$ternary$rtl/floating_point_greater.v:10$52_Y": {
+          "hide_name": 1,
+          "bits": [ 36 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:10.19-12.45"
+          }
+        },
+        "$ternary$rtl/floating_point_greater.v:11$51_Y": {
+          "hide_name": 1,
+          "bits": [ 35 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:11.19-12.45"
+          }
+        },
+        "a": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:2.18-2.19"
+          }
+        },
+        "agtb": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:3.12-3.16"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:2.21-2.22"
+          }
+        },
+        "mag_a": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:7.17-7.22"
+          }
+        },
+        "mag_b": {
+          "hide_name": 0,
+          "bits": [ 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:7.34-7.39"
+          }
+        },
+        "sign_a": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:6.10-6.16"
+          }
+        },
+        "sign_b": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "rtl/floating_point_greater.v:6.26-6.32"
+          }
+        }
+      }
+    }
+  }
+}

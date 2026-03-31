@@ -1,0 +1,430 @@
+{
+  "creator": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 16.0.0 -fPIC -O3)",
+  "modules": {
+    "decoder_2216": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "rtl/decoder_2216.v:1.1-16.10"
+      },
+      "ports": {
+        "in": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "code": {
+          "direction": "output",
+          "bits": [ 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 ]
+        }
+      },
+      "cells": {
+        "uut0": {
+          "hide_name": 0,
+          "type": "decoder_224",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/decoder_2216.v:7.17-7.41"
+          },
+          "port_directions": {
+            "code": "output",
+            "en": "input",
+            "in": "input"
+          },
+          "connections": {
+            "code": [ 22, 23, 24, 25 ],
+            "en": [ "1" ],
+            "in": [ 4, 5 ]
+          }
+        },
+        "uut1": {
+          "hide_name": 0,
+          "type": "decoder_224",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/decoder_2216.v:8.17-8.44"
+          },
+          "port_directions": {
+            "code": "output",
+            "en": "input",
+            "in": "input"
+          },
+          "connections": {
+            "code": [ 6, 7, 8, 9 ],
+            "en": [ 22 ],
+            "in": [ 2, 3 ]
+          }
+        },
+        "uut2": {
+          "hide_name": 0,
+          "type": "decoder_224",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/decoder_2216.v:9.17-9.44"
+          },
+          "port_directions": {
+            "code": "output",
+            "en": "input",
+            "in": "input"
+          },
+          "connections": {
+            "code": [ 10, 11, 12, 13 ],
+            "en": [ 23 ],
+            "in": [ 2, 3 ]
+          }
+        },
+        "uut3": {
+          "hide_name": 0,
+          "type": "decoder_224",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/decoder_2216.v:10.17-10.44"
+          },
+          "port_directions": {
+            "code": "output",
+            "en": "input",
+            "in": "input"
+          },
+          "connections": {
+            "code": [ 14, 15, 16, 17 ],
+            "en": [ 24 ],
+            "in": [ 2, 3 ]
+          }
+        },
+        "uut4": {
+          "hide_name": 0,
+          "type": "decoder_224",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/decoder_2216.v:11.17-11.44"
+          },
+          "port_directions": {
+            "code": "output",
+            "en": "input",
+            "in": "input"
+          },
+          "connections": {
+            "code": [ 18, 19, 20, 21 ],
+            "en": [ 25 ],
+            "in": [ 2, 3 ]
+          }
+        }
+      },
+      "netnames": {
+        "code": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 ],
+          "attributes": {
+            "src": "rtl/decoder_2216.v:3.19-3.23"
+          }
+        },
+        "dec0": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+            "src": "rtl/decoder_2216.v:5.20-5.24"
+          }
+        },
+        "dec1": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "rtl/decoder_2216.v:5.26-5.30"
+          }
+        },
+        "dec2": {
+          "hide_name": 0,
+          "bits": [ 14, 15, 16, 17 ],
+          "attributes": {
+            "src": "rtl/decoder_2216.v:5.32-5.36"
+          }
+        },
+        "dec3": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21 ],
+          "attributes": {
+            "src": "rtl/decoder_2216.v:5.38-5.42"
+          }
+        },
+        "en": {
+          "hide_name": 0,
+          "bits": [ 22, 23, 24, 25 ],
+          "attributes": {
+            "src": "rtl/decoder_2216.v:5.16-5.18"
+          }
+        },
+        "in": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "src": "rtl/decoder_2216.v:2.17-2.19"
+          }
+        }
+      }
+    },
+    "decoder_224": {
+      "attributes": {
+        "src": "rtl/decoder_224.v:1.1-11.10"
+      },
+      "ports": {
+        "en": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "in": {
+          "direction": "input",
+          "bits": [ 3, 4 ]
+        },
+        "code": {
+          "direction": "output",
+          "bits": [ 5, 6, 7, 8 ]
+        }
+      },
+      "cells": {
+        "$and$rtl/decoder_224.v:6$2": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/decoder_224.v:6.22-6.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 3 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$and$rtl/decoder_224.v:7$3": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/decoder_224.v:7.22-7.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 4 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$and$rtl/decoder_224.v:7$5": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/decoder_224.v:7.22-7.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 10 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$and$rtl/decoder_224.v:8$7": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/decoder_224.v:8.22-8.33"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 11 ],
+            "Y": [ 12 ]
+          }
+        },
+        "$and$rtl/decoder_224.v:8$8": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/decoder_224.v:8.22-8.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 3 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$and$rtl/decoder_224.v:9$12": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/decoder_224.v:9.22-9.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 10 ],
+            "Y": [ 5 ]
+          }
+        },
+        "$not$rtl/decoder_224.v:9$11": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/decoder_224.v:9.36-9.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 10 ]
+          }
+        },
+        "$not$rtl/decoder_224.v:9$9": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/decoder_224.v:9.27-9.33"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "Y": [ 11 ]
+          }
+        }
+      },
+      "netnames": {
+        "$and$rtl/decoder_224.v:6$1_Y": {
+          "hide_name": 1,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "rtl/decoder_224.v:6.22-6.32"
+          }
+        },
+        "$and$rtl/decoder_224.v:8$7_Y": {
+          "hide_name": 1,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "rtl/decoder_224.v:8.22-8.33"
+          }
+        },
+        "$not$rtl/decoder_224.v:7$4_Y": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "rtl/decoder_224.v:7.35-7.41"
+          }
+        },
+        "$not$rtl/decoder_224.v:8$6_Y": {
+          "hide_name": 1,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "rtl/decoder_224.v:8.27-8.33"
+          }
+        },
+        "code": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8 ],
+          "attributes": {
+            "src": "rtl/decoder_224.v:4.18-4.22"
+          }
+        },
+        "en": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "rtl/decoder_224.v:2.11-2.13"
+          }
+        },
+        "in": {
+          "hide_name": 0,
+          "bits": [ 3, 4 ],
+          "attributes": {
+            "src": "rtl/decoder_224.v:3.17-3.19"
+          }
+        }
+      }
+    }
+  }
+}

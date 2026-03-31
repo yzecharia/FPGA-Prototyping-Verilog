@@ -1,0 +1,188 @@
+{
+  "creator": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 16.0.0 -fPIC -O3)",
+  "modules": {
+    "b_shift_1": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "rtl/b_shift_1.v:1.1-11.10"
+      },
+      "ports": {
+        "lr": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "data": {
+          "direction": "input",
+          "bits": [ 3, 4, 5, 6, 7, 8, 9, 10 ]
+        },
+        "shifted_data": {
+          "direction": "output",
+          "bits": [ 11, 12, 13, 14, 15, 16, 17, 18 ]
+        }
+      },
+      "cells": {
+        "$ternary$rtl/b_shift_1.v:10$1": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "rtl/b_shift_1.v:10.27-10.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19, 20, 21, 22, 23, 24, 25, 26 ],
+            "B": [ 27, 28, 29, 30, 31, 32, 33, 34 ],
+            "S": [ 2 ],
+            "Y": [ 11, 12, 13, 14, 15, 16, 17, 18 ]
+          }
+        },
+        "uut0": {
+          "hide_name": 0,
+          "type": "left_shift_1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/b_shift_1.v:7.18-7.41"
+          },
+          "port_directions": {
+            "data": "input",
+            "shifted_data": "output"
+          },
+          "connections": {
+            "data": [ 3, 4, 5, 6, 7, 8, 9, 10 ],
+            "shifted_data": [ 27, 28, 29, 30, 31, 32, 33, 34 ]
+          }
+        },
+        "uut1": {
+          "hide_name": 0,
+          "type": "right_shift_1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/b_shift_1.v:8.19-8.43"
+          },
+          "port_directions": {
+            "data": "input",
+            "shifted_data": "output"
+          },
+          "connections": {
+            "data": [ 3, 4, 5, 6, 7, 8, 9, 10 ],
+            "shifted_data": [ 19, 20, 21, 22, 23, 24, 25, 26 ]
+          }
+        }
+      },
+      "netnames": {
+        "data": {
+          "hide_name": 0,
+          "bits": [ 3, 4, 5, 6, 7, 8, 9, 10 ],
+          "attributes": {
+            "src": "rtl/b_shift_1.v:3.17-3.21"
+          }
+        },
+        "left_shift": {
+          "hide_name": 0,
+          "bits": [ 27, 28, 29, 30, 31, 32, 33, 34 ],
+          "attributes": {
+            "src": "rtl/b_shift_1.v:6.16-6.26"
+          }
+        },
+        "lr": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "rtl/b_shift_1.v:2.11-2.13"
+          }
+        },
+        "right_shift": {
+          "hide_name": 0,
+          "bits": [ 19, 20, 21, 22, 23, 24, 25, 26 ],
+          "attributes": {
+            "src": "rtl/b_shift_1.v:6.28-6.39"
+          }
+        },
+        "shifted_data": {
+          "hide_name": 0,
+          "bits": [ 11, 12, 13, 14, 15, 16, 17, 18 ],
+          "attributes": {
+            "src": "rtl/b_shift_1.v:4.18-4.30"
+          }
+        }
+      }
+    },
+    "left_shift_1": {
+      "attributes": {
+        "src": "rtl/b_shift_1.v:13.1-20.10"
+      },
+      "ports": {
+        "data": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ]
+        },
+        "shifted_data": {
+          "direction": "output",
+          "bits": [ 9, 2, 3, 4, 5, 6, 7, 8 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "data": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "src": "rtl/b_shift_1.v:14.17-14.21"
+          }
+        },
+        "shifted_data": {
+          "hide_name": 0,
+          "bits": [ 9, 2, 3, 4, 5, 6, 7, 8 ],
+          "attributes": {
+            "src": "rtl/b_shift_1.v:15.18-15.30"
+          }
+        }
+      }
+    },
+    "right_shift_1": {
+      "attributes": {
+        "src": "rtl/b_shift_1.v:22.1-29.10"
+      },
+      "ports": {
+        "data": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ]
+        },
+        "shifted_data": {
+          "direction": "output",
+          "bits": [ 3, 4, 5, 6, 7, 8, 9, 2 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "data": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "src": "rtl/b_shift_1.v:23.17-23.21"
+          }
+        },
+        "shifted_data": {
+          "hide_name": 0,
+          "bits": [ 3, 4, 5, 6, 7, 8, 9, 2 ],
+          "attributes": {
+            "src": "rtl/b_shift_1.v:24.18-24.30"
+          }
+        }
+      }
+    }
+  }
+}

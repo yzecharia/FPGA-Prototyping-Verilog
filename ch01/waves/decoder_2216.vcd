@@ -1,0 +1,286 @@
+$date
+	Wed Mar 25 21:04:44 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module decoder_2216_tb $end
+$var wire 16 ! code [15:0] $end
+$var reg 4 " in [3:0] $end
+$var integer 32 # i [31:0] $end
+$scope module dut $end
+$var wire 4 $ in [3:0] $end
+$var wire 4 % en [3:0] $end
+$var wire 4 & dec3 [3:0] $end
+$var wire 4 ' dec2 [3:0] $end
+$var wire 4 ( dec1 [3:0] $end
+$var wire 4 ) dec0 [3:0] $end
+$var wire 16 * code [15:0] $end
+$scope module uut0 $end
+$var wire 1 + en $end
+$var wire 2 , in [1:0] $end
+$var wire 4 - code [3:0] $end
+$upscope $end
+$scope module uut1 $end
+$var wire 1 . en $end
+$var wire 2 / in [1:0] $end
+$var wire 4 0 code [3:0] $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 1 en $end
+$var wire 2 2 in [1:0] $end
+$var wire 4 3 code [3:0] $end
+$upscope $end
+$scope module uut3 $end
+$var wire 1 4 en $end
+$var wire 2 5 in [1:0] $end
+$var wire 4 6 code [3:0] $end
+$upscope $end
+$scope module uut4 $end
+$var wire 1 7 en $end
+$var wire 2 8 in [1:0] $end
+$var wire 4 9 code [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#10
+$dumpvars
+b0 9
+b0 8
+07
+b0 6
+b0 5
+04
+b0 3
+b0 2
+01
+b1 0
+b0 /
+1.
+b1 -
+b0 ,
+1+
+b1 *
+b1 )
+b0 (
+b0 '
+b0 &
+b1 %
+b0 $
+b0 #
+b0 "
+b1 !
+$end
+#20
+b10 !
+b10 *
+b10 )
+b10 0
+b1 /
+b1 2
+b1 5
+b1 8
+b1 "
+b1 $
+b1 #
+#30
+b100 !
+b100 *
+b100 )
+b100 0
+b10 /
+b10 2
+b10 5
+b10 8
+b10 "
+b10 $
+b10 #
+#40
+b1000 !
+b1000 *
+b1000 )
+b1000 0
+b11 /
+b11 2
+b11 5
+b11 8
+b11 "
+b11 $
+b11 #
+#50
+b1 (
+b1 3
+11
+0.
+b10000 !
+b10000 *
+b10 %
+b10 -
+b0 )
+b0 0
+b1 ,
+b0 /
+b0 2
+b0 5
+b0 8
+b100 "
+b100 $
+b100 #
+#60
+b100000 !
+b100000 *
+b10 (
+b10 3
+b1 /
+b1 2
+b1 5
+b1 8
+b101 "
+b101 $
+b101 #
+#70
+b1000000 !
+b1000000 *
+b100 (
+b100 3
+b10 /
+b10 2
+b10 5
+b10 8
+b110 "
+b110 $
+b110 #
+#80
+b10000000 !
+b10000000 *
+b1000 (
+b1000 3
+b11 /
+b11 2
+b11 5
+b11 8
+b111 "
+b111 $
+b111 #
+#90
+b1 '
+b1 6
+b0 )
+b0 0
+14
+01
+0.
+b100000000 !
+b100000000 *
+b100 %
+b100 -
+b0 (
+b0 3
+b10 ,
+b0 /
+b0 2
+b0 5
+b0 8
+b1000 "
+b1000 $
+b1000 #
+#100
+b1000000000 !
+b1000000000 *
+b10 '
+b10 6
+b1 /
+b1 2
+b1 5
+b1 8
+b1001 "
+b1001 $
+b1001 #
+#110
+b10000000000 !
+b10000000000 *
+b100 '
+b100 6
+b10 /
+b10 2
+b10 5
+b10 8
+b1010 "
+b1010 $
+b1010 #
+#120
+b100000000000 !
+b100000000000 *
+b1000 '
+b1000 6
+b11 /
+b11 2
+b11 5
+b11 8
+b1011 "
+b1011 $
+b1011 #
+#130
+b1 &
+b1 9
+17
+04
+b1000000000000 !
+b1000000000000 *
+b1000 %
+b1000 -
+b0 '
+b0 6
+b11 ,
+b0 /
+b0 2
+b0 5
+b0 8
+b1100 "
+b1100 $
+b1100 #
+#140
+b10000000000000 !
+b10000000000000 *
+b10 &
+b10 9
+b1 /
+b1 2
+b1 5
+b1 8
+b1101 "
+b1101 $
+b1101 #
+#150
+b100000000000000 !
+b100000000000000 *
+b100 &
+b100 9
+b10 /
+b10 2
+b10 5
+b10 8
+b1110 "
+b1110 $
+b1110 #
+#160
+b1000000000000000 !
+b1000000000000000 *
+b1000 &
+b1000 9
+b11 /
+b11 2
+b11 5
+b11 8
+b1111 "
+b1111 $
+b1111 #
+#170
+b10000 #

@@ -1,0 +1,151 @@
+{
+  "creator": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 16.0.0 -fPIC -O3)",
+  "modules": {
+    "prio_encoder_if": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "rtl/prio_encoder_if.v:1.1-14.10"
+      },
+      "ports": {
+        "r": {
+          "direction": "input",
+          "offset": 1,
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 6, 7, 8 ]
+        }
+      },
+      "cells": {
+        "$procmux$19": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/prio_encoder_if.v:9.18-9.30|rtl/prio_encoder_if.v:9.14-11.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, "0" ],
+            "B": [ "0", "1" ],
+            "S": [ 3 ],
+            "Y": [ 10, 11 ]
+          }
+        },
+        "$procmux$28": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/prio_encoder_if.v:8.18-8.30|rtl/prio_encoder_if.v:8.14-11.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10, 11 ],
+            "B": [ "1", "1" ],
+            "S": [ 4 ],
+            "Y": [ 12, 13 ]
+          }
+        },
+        "$procmux$34": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/prio_encoder_if.v:7.13-7.25|rtl/prio_encoder_if.v:7.9-11.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12, 13, "0" ],
+            "B": [ "0", "0", "1" ],
+            "S": [ 5 ],
+            "Y": [ 6, 7, 8 ]
+          }
+        },
+        "$procmux$7": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/prio_encoder_if.v:10.18-10.30|rtl/prio_encoder_if.v:10.14-11.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 2 ],
+            "Y": [ 9 ]
+          }
+        }
+      },
+      "netnames": {
+        "$2\\y[2:0]": {
+          "hide_name": 1,
+          "bits": [ 12, 13 ],
+          "attributes": {
+          }
+        },
+        "$3\\y[2:0]": {
+          "hide_name": 1,
+          "bits": [ 10, 11 ],
+          "attributes": {
+          }
+        },
+        "$4\\y[2:0]": {
+          "hide_name": 1,
+          "bits": [ 9 ],
+          "attributes": {
+          }
+        },
+        "r": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "offset": 1,
+          "attributes": {
+            "src": "rtl/prio_encoder_if.v:2.17-2.18"
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8 ],
+          "attributes": {
+            "src": "rtl/prio_encoder_if.v:3.23-3.24"
+          }
+        }
+      }
+    }
+  }
+}

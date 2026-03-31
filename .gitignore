@@ -1,0 +1,23 @@
+# Vivado / Xilinx
+*.jou
+*.log
+*.str
+*.bit
+*.bin
+*.ltx
+*.xpr
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+.Xil/
+
+# ModelSim / Questa
+work/
+transcript
+*.wlf
+*.vstf
+
+# General
+.DS_Store

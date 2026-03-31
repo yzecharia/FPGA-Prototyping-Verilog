@@ -1,0 +1,323 @@
+{
+  "creator": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 16.0.0 -fPIC -O3)",
+  "modules": {
+    "bcd_inc_4bit": {
+      "attributes": {
+        "src": "rtl/bcd_incrementor.v:16.1-29.10"
+      },
+      "ports": {
+        "en": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "num": {
+          "direction": "input",
+          "bits": [ 3, 4, 5, 6 ]
+        },
+        "num_inc": {
+          "direction": "output",
+          "bits": [ 7, 8, 9, 10 ]
+        },
+        "en_next": {
+          "direction": "output",
+          "bits": [ 11 ]
+        }
+      },
+      "cells": {
+        "$add$rtl/bcd_incrementor.v:25$25": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "rtl/bcd_incrementor.v:25.28-25.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3, 4, 5, 6 ],
+            "B": [ "1" ],
+            "Y": [ 12, 13, 14, 15 ]
+          }
+        },
+        "$eq$rtl/bcd_incrementor.v:28$26": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/bcd_incrementor.v:28.29-28.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3, 4, 5, 6 ],
+            "B": [ "1", "0", "0", "1" ],
+            "Y": [ 16 ]
+          }
+        },
+        "$logic_and$rtl/bcd_incrementor.v:28$27": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/bcd_incrementor.v:28.23-28.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 16 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$procmux$52": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bcd_incrementor.v:24.17-24.28|rtl/bcd_incrementor.v:24.13-25.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12, 13, 14, 15 ],
+            "B": [ "0", "0", "0", "0" ],
+            "S": [ 16 ],
+            "Y": [ 17, 18, 19, 20 ]
+          }
+        },
+        "$procmux$57": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bcd_incrementor.v:23.13-23.15|rtl/bcd_incrementor.v:23.9-26.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3, 4, 5, 6 ],
+            "B": [ 17, 18, 19, 20 ],
+            "S": [ 2 ],
+            "Y": [ 7, 8, 9, 10 ]
+          }
+        }
+      },
+      "netnames": {
+        "$2\\num_inc[3:0]": {
+          "hide_name": 1,
+          "bits": [ 17, 18, 19, 20 ],
+          "attributes": {
+            "src": "rtl/bcd_incrementor.v:22.5-27.8"
+          }
+        },
+        "$add$rtl/bcd_incrementor.v:25$25_Y": {
+          "hide_name": 1,
+          "bits": [ 12, 13, 14, 15 ],
+          "attributes": {
+          }
+        },
+        "$eq$rtl/bcd_incrementor.v:24$24_Y": {
+          "hide_name": 1,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "rtl/bcd_incrementor.v:24.17-24.28"
+          }
+        },
+        "en": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "rtl/bcd_incrementor.v:17.11-17.13"
+          }
+        },
+        "en_next": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "rtl/bcd_incrementor.v:20.12-20.19"
+          }
+        },
+        "num": {
+          "hide_name": 0,
+          "bits": [ 3, 4, 5, 6 ],
+          "attributes": {
+            "src": "rtl/bcd_incrementor.v:18.17-18.20"
+          }
+        },
+        "num_inc": {
+          "hide_name": 0,
+          "bits": [ 7, 8, 9, 10 ],
+          "attributes": {
+            "src": "rtl/bcd_incrementor.v:19.22-19.29"
+          }
+        }
+      }
+    },
+    "bcd_incrementor": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "rtl/bcd_incrementor.v:1.1-14.10"
+      },
+      "ports": {
+        "num_in": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ]
+        },
+        "bcd": {
+          "direction": "output",
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ]
+        },
+        "overflow": {
+          "direction": "output",
+          "bits": [ 26 ]
+        }
+      },
+      "cells": {
+        "uut0": {
+          "hide_name": 0,
+          "type": "bcd_inc_4bit",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/bcd_incrementor.v:9.18-9.57"
+          },
+          "port_directions": {
+            "en": "input",
+            "en_next": "output",
+            "num": "input",
+            "num_inc": "output"
+          },
+          "connections": {
+            "en": [ "1" ],
+            "en_next": [ 27 ],
+            "num": [ 2, 3, 4, 5 ],
+            "num_inc": [ 14, 15, 16, 17 ]
+          }
+        },
+        "uut1": {
+          "hide_name": 0,
+          "type": "bcd_inc_4bit",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/bcd_incrementor.v:10.18-10.56"
+          },
+          "port_directions": {
+            "en": "input",
+            "en_next": "output",
+            "num": "input",
+            "num_inc": "output"
+          },
+          "connections": {
+            "en": [ 27 ],
+            "en_next": [ 28 ],
+            "num": [ 6, 7, 8, 9 ],
+            "num_inc": [ 18, 19, 20, 21 ]
+          }
+        },
+        "uut2": {
+          "hide_name": 0,
+          "type": "bcd_inc_4bit",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/bcd_incrementor.v:11.18-11.63"
+          },
+          "port_directions": {
+            "en": "input",
+            "en_next": "output",
+            "num": "input",
+            "num_inc": "output"
+          },
+          "connections": {
+            "en": [ 28 ],
+            "en_next": [ 26 ],
+            "num": [ 10, 11, 12, 13 ],
+            "num_inc": [ 22, 23, 24, 25 ]
+          }
+        }
+      },
+      "netnames": {
+        "bcd": {
+          "hide_name": 0,
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+            "src": "rtl/bcd_incrementor.v:3.19-3.22"
+          }
+        },
+        "en1": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "rtl/bcd_incrementor.v:7.10-7.13"
+          }
+        },
+        "en2": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "rtl/bcd_incrementor.v:7.15-7.18"
+          }
+        },
+        "num_in": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "rtl/bcd_incrementor.v:2.18-2.24"
+          }
+        },
+        "overflow": {
+          "hide_name": 0,
+          "bits": [ 26 ],
+          "attributes": {
+            "src": "rtl/bcd_incrementor.v:4.12-4.20"
+          }
+        }
+      }
+    }
+  }
+}

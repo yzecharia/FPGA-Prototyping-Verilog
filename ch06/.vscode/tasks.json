@@ -1,0 +1,133 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "0a. Check Syntax (RTL Only)",
+      "type": "shell",
+      "command": "iverilog -g2012 -t null rtl/*.v",
+      "group": "build",
+      "presentation": { "clear": true, "reveal": "silent" },
+      "problemMatcher": {
+        "owner": "verilog",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": {
+          "regexp": "^([^:]+):(\\d+):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "message": 3
+        }
+      }
+    },
+    {
+      "label": "0b. Check Syntax (RTL + TB)",
+      "type": "shell",
+      "command": "MOD=\"${fileBasenameNoExtension}\"; MOD=\"${MOD%_tb}\"; iverilog -g2012 -t null rtl/*.v tb/${MOD}_tb.v",
+      "group": "build",
+      "presentation": { "clear": true, "reveal": "silent" },
+      "problemMatcher": {
+        "owner": "verilog",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": {
+          "regexp": "^([^:]+):(\\d+):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "message": 3
+        }
+      }
+    },
+    {
+      "label": "1. Compile for Simulation (Icarus)",
+      "type": "shell",
+      "command": "MOD=\"${fileBasenameNoExtension}\"; MOD=\"${MOD%_tb}\"; mkdir -p build waves && iverilog -g2012 -o build/${MOD}.out rtl/*.v tb/${MOD}_tb.v",
+      "group": "build",
+      "presentation": { "clear": true, "group": "sim" },
+      "problemMatcher": {
+        "owner": "verilog",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": {
+          "regexp": "^([^:]+):(\\d+):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "message": 3
+        }
+      }
+    },
+    {
+      "label": "2. Run simulation",
+      "type": "shell",
+      "command": "MOD=\"${fileBasenameNoExtension}\"; MOD=\"${MOD%_tb}\"; vvp build/${MOD}.out",
+      "dependsOn": "1. Compile for Simulation (Icarus)",
+      "presentation": { "clear": false, "group": "sim" }
+    },
+    {
+      "label": "3. Open waveform (Surfer)",
+      "type": "shell",
+      "command": "MOD=\"${fileBasenameNoExtension}\"; MOD=\"${MOD%_tb}\"; code -r waves/${MOD}.vcd",
+      "dependsOn": "2. Run simulation",
+      "presentation": { "reveal": "silent" }
+    },
+    {
+      "label": "4. Generate JSON (Yosys)",
+      "type": "shell",
+      "command": "MOD=\"${fileBasenameNoExtension}\"; MOD=\"${MOD%_tb}\"; mkdir -p build && yosys -p \"read_verilog rtl/*.v; prep -top ${MOD}; write_json build/${MOD}.json\"",
+      "dependsOn": "0a. Check Syntax (RTL Only)",
+      "presentation": { "clear": true, "group": "rtl" },
+      "problemMatcher": {
+        "owner": "yosys",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": {
+          "regexp": "^ERROR:\\s+(.*\\.v):(\\d+):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "message": 3
+        }
+      }
+    },
+    {
+      "label": "5. Generate SVG (netlistsvg)",
+      "type": "shell",
+      "command": "MOD=\"${fileBasenameNoExtension}\"; MOD=\"${MOD%_tb}\"; mkdir -p schematics && netlistsvg build/${MOD}.json -o schematics/${MOD}.svg",
+      "dependsOn": "4. Generate JSON (Yosys)",
+      "presentation": { "group": "rtl" }
+    },
+    {
+      "label": "6. Fix SVG Background",
+      "type": "shell",
+      "command": "MOD=\"${fileBasenameNoExtension}\"; MOD=\"${MOD%_tb}\"; sed -i '' 's/<svg /<svg style=\"background:white\" /' schematics/${MOD}.svg",
+      "dependsOn": "5. Generate SVG (netlistsvg)",
+      "presentation": { "reveal": "silent" }
+    },
+    {
+      "label": "7. Open RTL schematic",
+      "type": "shell",
+      "command": "MOD=\"${fileBasenameNoExtension}\"; MOD=\"${MOD%_tb}\"; open schematics/${MOD}.svg",
+      "dependsOn": "6. Fix SVG Background",
+      "presentation": { "reveal": "silent" }
+    },
+    {
+      "label": "🌊 FLOW: SIM ONLY (Simulation + Waves)",
+      "dependsOn": [
+        "3. Open waveform (Surfer)"
+      ],
+      "group": "build"
+    },
+    {
+      "label": "🛠️ FLOW: RTL ONLY (Syntax + Schematics)",
+      "dependsOn": [
+        "7. Open RTL schematic"
+      ],
+      "group": "build"
+    },
+    {
+      "label": "🚀 FLOW: FULL (Sim + Schematics)",
+      "dependsOn": [
+        "3. Open waveform (Surfer)",
+        "7. Open RTL schematic"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,579 @@
+{
+  "creator": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 16.0.0 -fPIC -O3)",
+  "modules": {
+    "dual_priority_encoder": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "rtl/dual_priority_encoder.v:1.1-17.10"
+      },
+      "ports": {
+        "req": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ]
+        },
+        "first": {
+          "direction": "output",
+          "bits": [ 14, 15, 16, 17 ]
+        },
+        "second": {
+          "direction": "output",
+          "bits": [ 18, 19, 20, 21 ]
+        },
+        "first_valid": {
+          "direction": "output",
+          "bits": [ 22 ]
+        },
+        "second_valid": {
+          "direction": "output",
+          "bits": [ 23 ]
+        }
+      },
+      "cells": {
+        "$shl$rtl/dual_priority_encoder.v:10$29": {
+          "hide_name": 1,
+          "type": "$shl",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000001100"
+          },
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:10.39-10.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1" ],
+            "B": [ 14, 15, 16, 17 ],
+            "Y": [ 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ]
+          }
+        },
+        "$ternary$rtl/dual_priority_encoder.v:10$30": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001100"
+          },
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:10.24-10.62"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ],
+            "S": [ 22 ],
+            "Y": [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47 ]
+          }
+        },
+        "$xor$rtl/dual_priority_encoder.v:13$31": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001100",
+            "Y_WIDTH": "00000000000000000000000000001100"
+          },
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:13.27-13.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47 ],
+            "B": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
+            "Y": [ 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59 ]
+          }
+        },
+        "uut0": {
+          "hide_name": 0,
+          "type": "priority_encoder",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/dual_priority_encoder.v:7.22-7.52"
+          },
+          "port_directions": {
+            "data": "input",
+            "index": "output",
+            "valid": "output"
+          },
+          "connections": {
+            "data": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
+            "index": [ 14, 15, 16, 17 ],
+            "valid": [ 22 ]
+          }
+        },
+        "uut1": {
+          "hide_name": 0,
+          "type": "priority_encoder",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/dual_priority_encoder.v:16.22-16.58"
+          },
+          "port_directions": {
+            "data": "input",
+            "index": "output",
+            "valid": "output"
+          },
+          "connections": {
+            "data": [ 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59 ],
+            "index": [ 18, 19, 20, 21 ],
+            "valid": [ 23 ]
+          }
+        }
+      },
+      "netnames": {
+        "$shl$rtl/dual_priority_encoder.v:10$29_Y": {
+          "hide_name": 1,
+          "bits": [ 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:10.39-10.53"
+          }
+        },
+        "dup_req": {
+          "hide_name": 0,
+          "bits": [ 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:13.17-13.24"
+          }
+        },
+        "first": {
+          "hide_name": 0,
+          "bits": [ 14, 15, 16, 17 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:3.29-3.34"
+          }
+        },
+        "first_valid": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:4.12-4.23"
+          }
+        },
+        "mask": {
+          "hide_name": 0,
+          "bits": [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:10.17-10.21"
+          }
+        },
+        "req": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:2.18-2.21"
+          }
+        },
+        "second": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:3.36-3.42"
+          }
+        },
+        "second_valid": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:4.25-4.37"
+          }
+        }
+      }
+    },
+    "prio_422": {
+      "attributes": {
+        "src": "rtl/dual_priority_encoder.v:39.1-49.10"
+      },
+      "ports": {
+        "data": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "index": {
+          "direction": "output",
+          "bits": [ 6, 7 ]
+        },
+        "valid": {
+          "direction": "output",
+          "bits": [ 8 ]
+        }
+      },
+      "cells": {
+        "$reduce_or$rtl/dual_priority_encoder.v:45$36": {
+          "hide_name": 1,
+          "type": "$reduce_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:45.20-45.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$ternary$rtl/dual_priority_encoder.v:46$39": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:46.20-48.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10 ],
+            "B": [ "1", "1" ],
+            "S": [ 5 ],
+            "Y": [ 6, 7 ]
+          }
+        },
+        "$ternary$rtl/dual_priority_encoder.v:47$38": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:47.20-48.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11, "0" ],
+            "B": [ "0", "1" ],
+            "S": [ 4 ],
+            "Y": [ 9, 10 ]
+          }
+        },
+        "$ternary$rtl/dual_priority_encoder.v:48$37": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:48.20-48.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 3 ],
+            "Y": [ 11 ]
+          }
+        }
+      },
+      "netnames": {
+        "$auto$wreduce.cc:514:run$61": {
+          "hide_name": 1,
+          "bits": [ 11, "0" ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:48.20-48.43"
+          }
+        },
+        "$ternary$rtl/dual_priority_encoder.v:47$38_Y": {
+          "hide_name": 1,
+          "bits": [ 9, 10 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:47.20-48.43"
+          }
+        },
+        "data": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:40.16-40.20"
+          }
+        },
+        "index": {
+          "hide_name": 0,
+          "bits": [ 6, 7 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:41.18-41.23"
+          }
+        },
+        "valid": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:42.12-42.17"
+          }
+        }
+      }
+    },
+    "priority_encoder": {
+      "attributes": {
+        "src": "rtl/dual_priority_encoder.v:19.1-37.10"
+      },
+      "ports": {
+        "data": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ]
+        },
+        "index": {
+          "direction": "output",
+          "bits": [ 14, 15, 16, 17 ]
+        },
+        "valid": {
+          "direction": "output",
+          "bits": [ 18 ]
+        }
+      },
+      "cells": {
+        "$reduce_or$rtl/dual_priority_encoder.v:32$54": {
+          "hide_name": 1,
+          "type": "$reduce_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:32.20-32.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19, 20, 21 ],
+            "Y": [ 18 ]
+          }
+        },
+        "$ternary$rtl/dual_priority_encoder.v:33$55": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:33.90-33.129"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0" ],
+            "B": [ 22, 23 ],
+            "S": [ 19 ],
+            "Y": [ 24, 25 ]
+          }
+        },
+        "$ternary$rtl/dual_priority_encoder.v:33$56": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:33.55-33.129"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 24, 25, "0" ],
+            "B": [ 26, 27, "1" ],
+            "S": [ 20 ],
+            "Y": [ 28, 29, 30 ]
+          }
+        },
+        "$ternary$rtl/dual_priority_encoder.v:33$57": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:33.20-33.129"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 28, 29, 30, "0" ],
+            "B": [ 31, 32, "0", "1" ],
+            "S": [ 21 ],
+            "Y": [ 14, 15, 16, 17 ]
+          }
+        },
+        "uut0": {
+          "hide_name": 0,
+          "type": "prio_422",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/dual_priority_encoder.v:28.14-28.53"
+          },
+          "port_directions": {
+            "data": "input",
+            "index": "output",
+            "valid": "output"
+          },
+          "connections": {
+            "data": [ 2, 3, 4, 5 ],
+            "index": [ 22, 23 ],
+            "valid": [ 19 ]
+          }
+        },
+        "uut1": {
+          "hide_name": 0,
+          "type": "prio_422",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/dual_priority_encoder.v:29.14-29.53"
+          },
+          "port_directions": {
+            "data": "input",
+            "index": "output",
+            "valid": "output"
+          },
+          "connections": {
+            "data": [ 6, 7, 8, 9 ],
+            "index": [ 26, 27 ],
+            "valid": [ 20 ]
+          }
+        },
+        "uut2": {
+          "hide_name": 0,
+          "type": "prio_422",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "rtl/dual_priority_encoder.v:30.14-30.54"
+          },
+          "port_directions": {
+            "data": "input",
+            "index": "output",
+            "valid": "output"
+          },
+          "connections": {
+            "data": [ 10, 11, 12, 13 ],
+            "index": [ 31, 32 ],
+            "valid": [ 21 ]
+          }
+        }
+      },
+      "netnames": {
+        "$auto$wreduce.cc:514:run$62": {
+          "hide_name": 1,
+          "bits": [ 28, 29, 30, "0" ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:33.55-33.129"
+          }
+        },
+        "$auto$wreduce.cc:514:run$63": {
+          "hide_name": 1,
+          "bits": [ 24, 25, "0", "0" ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:33.90-33.129"
+          }
+        },
+        "data": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:20.18-20.22"
+          }
+        },
+        "index": {
+          "hide_name": 0,
+          "bits": [ 14, 15, 16, 17 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:21.31-21.36"
+          }
+        },
+        "indexes[0]": {
+          "hide_name": 0,
+          "bits": [ 22, 23 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:26.16-26.23"
+          }
+        },
+        "indexes[1]": {
+          "hide_name": 0,
+          "bits": [ 26, 27 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:26.16-26.23"
+          }
+        },
+        "indexes[2]": {
+          "hide_name": 0,
+          "bits": [ 31, 32 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:26.16-26.23"
+          }
+        },
+        "valid": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:22.12-22.17"
+          }
+        },
+        "valids": {
+          "hide_name": 0,
+          "bits": [ 19, 20, 21 ],
+          "attributes": {
+            "src": "rtl/dual_priority_encoder.v:25.16-25.22"
+          }
+        }
+      }
+    }
+  }
+}

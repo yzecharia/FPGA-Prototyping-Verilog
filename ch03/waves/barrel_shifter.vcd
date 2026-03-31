@@ -1,0 +1,213 @@
+$date
+	Thu Mar 26 13:06:55 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module barrel_shifter_tb $end
+$var wire 8 ! shifted_data [7:0] $end
+$var parameter 32 " N $end
+$var reg 3 # amt [2:0] $end
+$var reg 8 $ data [7:0] $end
+$var reg 8 % expected [7:0] $end
+$var reg 1 & lr $end
+$var integer 32 ' errors [31:0] $end
+$var integer 32 ( i [31:0] $end
+$var integer 32 ) j [31:0] $end
+$scope module dut $end
+$var wire 3 * amt [2:0] $end
+$var wire 8 + data [7:0] $end
+$var wire 1 & lr $end
+$var wire 8 , shifted [7:0] $end
+$var wire 8 - shifted_data [7:0] $end
+$var wire 8 . is_rev [7:0] $end
+$var parameter 32 / N $end
+$scope function reverse $end
+$var reg 8 0 in [7:0] $end
+$var integer 32 1 i [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 /
+b1000 "
+$end
+#0
+$dumpvars
+b1000 1
+b10110001 0
+b10110001 .
+b10110001 -
+b10110001 ,
+b10110001 +
+b0 *
+b0 )
+b0 (
+b0 '
+0&
+b10110001 %
+b10110001 $
+b0 #
+b10110001 !
+$end
+#10
+b1000 1
+b11011000 0
+b11011000 !
+b11011000 -
+b11011000 ,
+b11011000 %
+b1 #
+b1 *
+b1 )
+#20
+b1000 1
+b1101100 0
+b1101100 !
+b1101100 -
+b1101100 ,
+b1101100 %
+b10 #
+b10 *
+b10 )
+#30
+b1000 1
+b110110 0
+b110110 !
+b110110 -
+b110110 ,
+b110110 %
+b11 #
+b11 *
+b11 )
+#40
+b1000 1
+b11011 0
+b11011 !
+b11011 -
+b11011 ,
+b11011 %
+b100 #
+b100 *
+b100 )
+#50
+b1000 1
+b10001101 0
+b10001101 !
+b10001101 -
+b10001101 ,
+b10001101 %
+b101 #
+b101 *
+b101 )
+#60
+b1000 1
+b11000110 0
+b11000110 !
+b11000110 -
+b11000110 ,
+b11000110 %
+b110 #
+b110 *
+b110 )
+#70
+b1000 1
+b1100011 0
+b1100011 !
+b1100011 -
+b1100011 ,
+b1100011 %
+b111 #
+b111 *
+b111 )
+#80
+b1000 1
+b10001101 0
+b10001101 ,
+b10001101 .
+b10110001 !
+b10110001 -
+b10110001 %
+b0 #
+b0 *
+1&
+b1 (
+b0 )
+#90
+b1100011 !
+b1100011 -
+b1000 1
+b11000110 0
+b11000110 ,
+b1100011 %
+b1 #
+b1 *
+b1 )
+#100
+b11000110 !
+b11000110 -
+b1000 1
+b1100011 0
+b1100011 ,
+b11000110 %
+b10 #
+b10 *
+b10 )
+#110
+b10001101 !
+b10001101 -
+b1000 1
+b10110001 0
+b10110001 ,
+b10001101 %
+b11 #
+b11 *
+b11 )
+#120
+b11011 !
+b11011 -
+b1000 1
+b11011000 0
+b11011000 ,
+b11011 %
+b100 #
+b100 *
+b100 )
+#130
+b110110 !
+b110110 -
+b1000 1
+b1101100 0
+b1101100 ,
+b110110 %
+b101 #
+b101 *
+b101 )
+#140
+b1101100 !
+b1101100 -
+b1000 1
+b110110 0
+b110110 ,
+b1101100 %
+b110 #
+b110 *
+b110 )
+#150
+b11011000 !
+b11011000 -
+b1000 1
+b11011 0
+b11011 ,
+b11011000 %
+b111 #
+b111 *
+b111 )
+#160
+b10 (
+b1000 )
