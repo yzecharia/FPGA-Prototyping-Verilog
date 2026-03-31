@@ -8,16 +8,17 @@ Hi, I'm **Yuval Zecharia** — a junior Electrical Engineering graduate (B.Sc, A
 
 I spent 3.5 years as a System Validation Engineer Intern at **Habana Labs (Intel)**, where I developed validation tests for **Gaudi3 AI accelerators**, optimized sensor data analysis, and worked closely with HW/SW teams on debugging and integration in FPGA/ASIC environments.
 
-I'm a self-taught, fast learner who is passionate about **RTL design, digital systems, and hardware validation**. This repo is part of my ongoing effort to deepen my hands-on Verilog and FPGA design skills using a **Basys3** prototyping board and **Vivado**.
+I'm a self-taught, fast learner who is passionate about **RTL design, digital systems, and hardware validation**. This repo is part of my ongoing effort to deepen my hands-on Verilog and FPGA design skills using a **Basys3** prototyping board.
 
 I'm currently looking for my first position as a **Design Engineer / Verilog Engineer** — if you're hiring for junior RTL design, FPGA development, or hardware validation roles, feel free to reach out!
 
 ## Tools
 
-- **HDL:** Verilog
+- **Editor:** VS Code with custom `tasks.json` build system
+- **HDL:** Verilog (SystemVerilog 2012)
 - **Board:** Digilent Basys3 (Artix-7)
-- **IDE:** Vivado
-- **Simulation:** Icarus Verilog + GTKWave
+- **Simulation:** Icarus Verilog + Surfer (VCD waveform viewer)
+- **Synthesis / Schematics:** Yosys + netlistsvg
 
 ## Repo Structure
 
