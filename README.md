@@ -4,7 +4,7 @@ Solving *FPGA Prototyping by Verilog Examples* by **Pong P. Chu** as I work thro
 
 ## About Me
 
-Hi, I'm **Yuval Zecharia** — a junior Electrical Engineering graduate (B.Sc, Ariel University) specializing in Computers and Communications, with a strong mathematical background from a concurrent B.Sc in Mathematics and Computer Science (GPA 96).
+Hi, I'm **Yuval Zecharia** — a junior Electrical Engineering graduate (B.Sc, Ariel University) specializing in Computers and Communications, with a strong mathematical background from a concurrent B.Sc in Mathematics and Computer Science.
 
 I spent 3.5 years as a System Validation Engineer Intern at **Habana Labs (Intel)**, where I developed validation tests for **Gaudi3 AI accelerators**, optimized sensor data analysis, and worked closely with HW/SW teams on debugging and integration in FPGA/ASIC environments.
 
